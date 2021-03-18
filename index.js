@@ -11,8 +11,9 @@ const app = express()
   .set('view engine', 'ejs')
 
 // Static public files
+console.log('ddd',__dirname);
 app.use(express.static(path.join(__dirname, 'public')))
-
+// app.use(express.static('/path/to/your/folder')).
 app.get('/', function(req, res) {
   res.send('Welcomd!');
 })
